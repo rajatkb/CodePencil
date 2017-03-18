@@ -6,14 +6,33 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CodePencil</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/skeleton/normalize.css">
+        <link rel="stylesheet" type="text/css" href="lib/skeleton/skeleton.css"> 
         <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet" type="text/css" href="lib/skeleton/normalize.css">
-        <link rel="stylesheet" type="text/css" href="lib/skeleton/skeleton.css">
+		<script type="text/javascript" src="scripts/index.js"></script>
     </head>
     <body>
-        <input id="htmlcontent" placeholder="HTML code goes here" />
-        <input id="csscontent" placeholder="CSS code goes here"/>
-        <input id="jscontent" placeholder="JS code goes here"/>
-        <iframe id="rendered" ></iframe>
+		<div class="workspace">
+			<div class="editor">
+				<div id="html">					
+					<h3>HTML &nbsp</h3><i id="html-minimizer" class="fa fa-minus-circle"></i><br>
+					<textarea id="htmlcontent" rows="15"></textarea>
+				</div>
+				<div id="css">
+					<h3>CSS &nbsp</h3><i id="css-minimizer" class="fa fa-minus-circle"></i><br>
+					<textarea id="csscontent" rows="15"></textarea>
+				</div>
+				<div id="javascript">
+					<h3>JS &nbsp</h3><i id="js-minimizer"class="fa fa-minus-circle"></i><br>
+					<textarea id="jscontent" rows="15"></textarea>
+				</div>
+			</div>
+			<div class="previewspace">
+				<div class="pagepreview">
+					<iframe id="rendered" src=""></iframe>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
