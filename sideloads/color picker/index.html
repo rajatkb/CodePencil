@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+
+	<body>
+        <!-- preview element -->
+<div class="preview"></div>
+
+<!-- colorpicker element -->
+<div class="colorpicker" style="display:none">
+    
+    <canvas id="picker" var="1" width="400" height="300"></canvas>
+
+    <div class="controls">
+        <div><label>R</label> <input type="text" id="rVal" /></div>
+        <div><label>G</label> <input type="text" id="gVal" /></div>
+        <div><label>B</label> <input type="text" id="bVal" /></div>
+        <div><label>RGB</label> <input type="text" id="rgbVal" /></div>
+        <div><label>HEX</label> <input type="text" id="hexVal" /></div>
+    </div>
+</div>
+	</body>
+</html>
