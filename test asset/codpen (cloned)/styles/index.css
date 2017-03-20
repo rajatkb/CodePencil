@@ -1,0 +1,55 @@
+/* CSS code for the project goes here */
+.workspace {
+	width: 90%;
+	background: rgb(50, 50, 50);
+	margin: 5% auto;
+	padding: 20px;
+}
+.editor {
+	width: 33%;
+}
+.previewspace {
+	width: 66%;
+}
+.editor, .previewspace {
+	display: inline-block;
+}
+#html, #css, #javascript {
+	height: 40%;
+	background: grey;
+	padding: 1%;
+	margin: 1%;
+	border-radius: 1%;
+	color: white;
+	line-height: 0%;
+	transition: transform 1.0s ease-in-out;
+}
+#htmlcontent, #csscontent, #jscontent {
+	transition: width 1.0s ease-in-out;
+}
+.animate {
+	transform: translate(-100px, 100px) rotate(90deg);
+}
+textarea {
+	outline: none;
+	resize: none;
+	padding: 10px;
+	margin: 0px auto;
+	width: 100%;
+	height: 100%;
+	text-align: justify;
+	font: 12px Tahoma;
+	color: black;
+	background: rgb(250, 250, 250);
+	/* overflow-y: scroll; */
+}
+.editor h3, .editor > i {
+	font: 18px Tahoma;
+	display: inline-block;
+}
+iframe {
+	border: 1px dashed grey;
+	width: 100%;
+	height: 1065px;
+	margin: 0%;
+}
