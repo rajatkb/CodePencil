@@ -51,6 +51,7 @@ div[contenteditable = "true"] {
 	font: 20px ;
 	color: black;
 	background: rgb(250, 250, 250);
+	overflow: auto;
 }
 .editor h3, .editor > i {
 	font: 18px Tahoma;
