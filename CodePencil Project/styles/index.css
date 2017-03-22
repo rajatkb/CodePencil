@@ -1,42 +1,69 @@
 /* CSS code for the project goes here */
 .workspace {
-	width: 90%;
+	position: absolute;
+    top: 50px;
+    right: 10px;
+    left: 50px;
+    bottom: 5px;
 	background: rgb(50, 50, 50);
-	margin: 5px auto;
-	padding: 20px;
+	margin: 0px auto 0px auto;
+	padding: 5px;
 }
 .editor, .previewspace {
-	display: inline-block;
+	float: left;
 }
+
+.editor{
+    width: 33%;
+    height: 99%;
+    padding-bottom: 5px;
+}
+
+.previewspace{
+    
+    width: 63.8%;
+    margin-left: 2.4%;
+    height: 98.9%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.clear{
+    
+    clear: both;
+    
+}
+
 #html, #css, #javascript {
 	background: grey;
-	padding: 5px;
+	padding:2px 5px;
 	margin: 5px;
 	border-radius: 4px;
 	color: white;
-	line-height: 0px;
-	
-	transition: transform 1.0s ease-in-out;
+    width: 100%;
+    height: 32%;
 }
-textarea {
-	outline: none;
-	resize: none;
+div[contenteditable = "true"] {
 	padding: 10px;
 	margin: 0px auto;
-	width: 450px;
-	height: 250px;
-	text-align: justify;
-	font: 20px Tahoma;
+	width: auto;
+	height: 73%;
+	font: 20px ;
 	color: black;
 	background: rgb(250, 250, 250);
 }
 .editor h3, .editor > i {
 	font: 18px Tahoma;
 	display: inline-block;
+    padding: 0px;
+    margin: 3px;
 }
+
+
 iframe {
-	border: 1px dashed grey;
-	width: 700px;
-	height: 900px;
-	margin: 10px auto;
+    border : none;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+    background-color: white;
 }
