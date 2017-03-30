@@ -169,31 +169,25 @@ z-index: 999;
     padding: 5px;
     position: relative;
     transition: .5s ease-in-out;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.8);
-
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+   
 }
-
+#btn:hover{
+    transition: 0.9;
+     -webkit-transform: rotateZ(720deg);
+      -moz-transform: rotateZ(720deg);
+      transform: rotateZ(720deg);
+    cursor: pointer;
+}
 
 #btn:active{
-    transform: scale(0.9);
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.8);
+    transform: scale(0.2);
+    opacity: 0.7;
 }
-#scroll{
-    width: 100%;
-    opacity: 0.97;
-    position: relative;
-    height: 0px;
-    top: 50px;
-    background: grey;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.3) ;
-    z-index: 9999;
-    margin: 0 auto;
-    
-}
+
 #box
 {
-    
-    overflow: hidden;
+    top: 50px;
     position: relative;
     width: 50%;
     height: 0px;
@@ -204,35 +198,33 @@ z-index: 999;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.3) ;
     
 }
+.scrollbox{
+  -webkit-animation: myframes 3s ease;
+  animation: myframes 1s ease;
+    
+    animation-fill-mode: forwards;
+    
+
+}
+
 #overlay-back {
-    position   : absolute;          /*new characteristics to div for fade in*/
+    position   : absolute;
     top        : 0;
     left       : 0;
     width      : 100%;
     height     : 100%;
     background : #000;
-    opacity    : 0.6;
+    opacity    : 0.8;
     color: black;
-    filter     : alpha(opacity=60);
+    
     z-index    : 5;
     display    : none;
 }
-.scrollbox{
-  -webkit-animation: myframesbox 3s ease;
-  animation: myframesbox 1s ease;
-    
-    animation-fill-mode: forwards;
-    
 
-}
-.scrollpage{
-    -webkit-animation: myframesscroll 3s ease;
-  animation: myframesscroll 1s ease;
-    
-    animation-fill-mode: forwards;
-}
 
-@-webkit-keyframes myframesbox {
+
+
+@-webkit-keyframes myframes {
   0% {
     height: 0px;
   }
@@ -243,7 +235,7 @@ z-index: 999;
  
 }
 
-@keyframes myframesbox {
+@keyframes myframes {
   0% {
     height: 0px;
   }
@@ -254,23 +246,6 @@ z-index: 999;
   
 }
 
-@-webkit-keyframes myframesscroll {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 600px;
-  }
-  
- 
-}
 
-@keyframes myframesscroll {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 600px;
-  } 
-}
+
 /*nav bar ends*/
