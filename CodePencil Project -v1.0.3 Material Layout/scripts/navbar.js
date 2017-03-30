@@ -2,7 +2,7 @@
 $(document).ready(function(){
     $("#btn").click(function(){
     
-        $("#scroll").toggleClass("scrollpage");
+        $('#box, #overlay-back').fadeIn(500);
         $("#box").toggleClass("scrollbox");
         
         
