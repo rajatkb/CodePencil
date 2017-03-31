@@ -1,4 +1,4 @@
-var renderScript= function( html , css , js , iframe){
+var renderScript= function( html , css , js , iframe , dependencyList){
      
 
     this.htmlInside ="";        // This is the html that is inside the pre text box
@@ -86,13 +86,3 @@ var renderScript= function( html , css , js , iframe){
         sessionStorage.setItem('js', $(js)[0].innerHTML);
     });    
 };
-
-
-
-
-$(document).ready(function(){
- 
-    renderScript('#htmlcontent', '#csscontent' , '#jscontent', '#rendered');
-    
-     
-});

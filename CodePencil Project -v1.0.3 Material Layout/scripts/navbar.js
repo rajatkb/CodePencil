@@ -1,11 +1,11 @@
-//This is the javascript file to bes used for main page functionality 
+// JS for the navigation bar 
 
-$(document).ready(function(){
-    $("#btn").click(function(){
+
+var navbar = function(){
     
-        $('#box, #overlay-back').css("display")=="none"? $("#overlay-back").fadeIn(500):$("#overlay-back").fadeOut(500);
+     $("#btn").click(function(){    
+        $('#overlay-back').fadeToggle(500);
         $("#box").toggleClass("scrollbox");
-    
-        
     });
-});
+    
+};

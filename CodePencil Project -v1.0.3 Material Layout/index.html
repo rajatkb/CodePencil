@@ -7,26 +7,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CodePencil</title>
 		<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="styles/index.css">
         <script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
         <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
-        <script type="text/javascript" src="scripts/index.js"></script>
         <script type="text/javascript" src="scripts/renderScript.js"></script>
         <script type="text/javascript" src="scripts/workspace.js"></script>
         <script type="text/javascript" src="scripts/navbar.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
     </head>
     <body>
         
         <header>
             <div class="containernav">
                 <nav>
+                    <div class="brand"></div>
                     <span id="btn"><i class="fa fa-cog"  style="font-size:25px; color: black;"></i></span>
                 </nav>
             </div>
-            <div id="overlay-back"></div> 
-                <div id="box"></div>
-            
+            <div id="overlay-back"></div>
+            <div id="box"></div>
         </header>
 		<div class="workspace">
 			<div class="editor">
@@ -44,6 +45,7 @@
 				</div>
 			</div>
 			<div class="previewspace">
+                <div class="max-min-container"><div class="iframe-max-min"></div></div>
 				<iframe id="rendered" src=""></iframe>
 			</div>
 		</div>

@@ -10,7 +10,7 @@
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
 	margin: 0px auto 0px auto;
 	padding: 5px;
-    background-color: rgba(250,250,250,1);
+    background-color: #9E9E9E;
     display: flex;
     
 }
@@ -20,6 +20,7 @@
     display: inline-block;
     width:34%;
     padding-bottom: 5px;
+    
 }
 
 .previewspace{
@@ -42,6 +43,10 @@
 	color: white;
     width: 100%;
     height: 32%;
+    min-width:10%;
+    min-height: 10%;
+    
+    
 }
 
 
@@ -56,6 +61,8 @@
 	color: white;
     width: 100%;
     height: 32%;
+    min-width:10%;
+    min-height: 10%;
 }
 
 
@@ -64,11 +71,12 @@
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     background-color: limegreen;
 	padding:2px 5px;
-	
 	border-radius: 4px;
 	color: white;
     width: 100%;
     height: 32%;
+    min-width:10%;
+    min-height: 10%;
 }
  
 
@@ -100,8 +108,8 @@ pre[contenteditable = "true"]:focus {
 
 
 .editor h3 {
-	font: 18px Tahoma;
-	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+    display: inline-block;
     padding: 0px;
     margin: 3px;
 }
@@ -127,35 +135,67 @@ iframe {
 	height: 100%;
 	margin: auto;
     background-color: white;
-    box-shadow: 6px 6px 18px rgba(0,0,0,0.8);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+.max-min-container{
+    
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:1px;
+    right:1px;
+    z-index: 100;
+    background-color: grey;
+    opacity: 0.4;
+    transition: opacity 600ms;
+    border-radius: 2px;
+    
+}
+.iframe-max-min{
+    height: 55%;
+    width: 55%;
+    margin: 2px auto 2px auto;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: white;
+    
+}
+
+div.max-min-container:hover{
+    
+    opacity: 0.9;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+}
+
+div.max-min-container:active{
+    box-shadow: none;
 }
 
 /*=======================================*/
 ::-webkit-scrollbar {
-    width: 2.4%;
+    width: 10px;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 1px;
     background: #e0e0e0;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
 }
-::-webkit-scrollbar-thumb: active {
+::-webkit-scrollbar-thumb:active {
     background: #bdbdbd;
     box-shadow: none;
 }
-
+/* scroll bar*/
 /* Navbar styling*/
 nav {
-width: 98.5%;
 position: absolute;
 left: 0%;
+right: 0%;    
 top: 0px;
 height: 35px;
 padding: 10px;
 background: #AB47BC;
 border-radius: 0px;
-
-box-shadow: 0 8px 6px -6px grey;
 z-index: 999;
 
 }
@@ -165,46 +205,64 @@ z-index: 999;
 #btn{
     float: right;
     background: white;
-    border-radius: 50%;
     padding: 5px;
     position: relative;
-    transition: .5s ease-in-out;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.8);
-   
-}
-#btn:hover{
-    transition: 0.9;
-     -webkit-transform: rotateZ(720deg);
-      -moz-transform: rotateZ(720deg);
-      transform: rotateZ(720deg);
-    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+
 }
 
 #btn:active{
-    transform: scale(0.2);
-    opacity: 0.7;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+}
+
+#btn i:hover{
+    transition: all 400ms;
+    transform: rotate(90deg);
+}
+
+#btn i:active{
+    transition: all 400ms;
+    transform: scale(0.8);
 }
 
 #box
 {
-    top: 50px;
     position: relative;
-    width: 50%;
+    width: 600px;
     height: 0px;
+    margin: auto;
+
     opacity: 1;
     background: #FFFFFF;
     z-index: 9999;
-    margin: 0 auto;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.3) ;
-    
+    top: 50px;
 }
+/*Animates the box in */
 .scrollbox{
   -webkit-animation: myframes 3s ease;
-  animation: myframes 1s ease;
-    
-    animation-fill-mode: forwards;
-    
+   animation: myframes .8s ease; 
+   animation-fill-mode: forwards;
+}
 
+/*the animation keyframe for scrollbox*/
+@-webkit-keyframes myframes {
+  0% {
+    height: 0px;  
+  }
+  100% {
+    height: 500px;
+  }
+}
+/*fixing compatibility issues*/
+@keyframes myframes {
+  0% {
+    height: 0px;  
+    transform: rotateY(90deg);    
+  }
+  100% {
+    height: 500px;
+  } 
 }
 
 #overlay-back {
@@ -216,36 +274,8 @@ z-index: 999;
     background : #000;
     opacity    : 0.8;
     color: black;
-    
     z-index    : 5;
     display    : none;
 }
-
-
-
-
-@-webkit-keyframes myframes {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 400px;
-  }
-  
- 
-}
-
-@keyframes myframes {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 400px;
-  }
-  
-  
-}
-
-
 
 /*nav bar ends*/
