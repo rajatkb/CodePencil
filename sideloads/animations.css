@@ -1,0 +1,51 @@
+.minimize-now {    
+    animation: editor-minimized 1.0s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes editor-minimized {
+    0% {
+        position: fixed;      
+        z-index: 10000000;  
+        transform: translate(0px, 0px) rotate(0deg);
+        width: 100%;
+        height: 32%;
+    }
+    100% {
+        transform: translate(-80px, 180px) rotate(60deg);
+        width: 16.5%;
+        height: 4%; 
+    }
+}
+
+.maximize-now {
+    animation: editor-maximized 1.0s ease-in-out 0s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes editor-maximized {
+    0% {
+        transform: translate(-80px, 180px) rotate(60deg);
+        width: 16.5%;
+        height: 4%;
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+        width: 100%;
+        height: 32%; 
+    }
+/* 
+    
+    $(".max-min-container").click(function() {
+        var netWidth = parseInt($(".workspace").css("width"));
+        if(editor.css("display") == "block") {
+            editor.css("position", "fixed");
+            editor.hide(500);
+            $(".previewspace").css("width", netWidth);
+        } else {
+            editor.css("position", "");
+            editor.show(500);
+        }
+    });
+    
+*/
